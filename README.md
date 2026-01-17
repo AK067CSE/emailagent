@@ -2,6 +2,9 @@
 AGENTIC DESIGN PATTERN
 
 <img width="1656" height="716" alt="image" src="https://github.com/user-attachments/assets/22c1e1e7-049e-4b44-9bff-38959ba16ca5" />
+![1_page-0012](https://github.com/user-attachments/assets/60323d53-759e-4843-9233-1446f868be0e)
+
+
 
 
 
