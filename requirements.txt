@@ -2,6 +2,10 @@ streamlit
 pandas
 numpy
 python-dotenv
+aiohttp
+groq
+streamlit-webrtc
+av
 langchain
 langchain-core
 langchain-community
