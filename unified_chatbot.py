@@ -16,6 +16,9 @@ import asyncio
 import io
 import wave
 import tempfile
+import os
+import threading
+from collections import deque
 
 # Try to import voice agent, fallback if not available
 try:
@@ -33,6 +36,25 @@ try:
     WEBRTC_AVAILABLE = True
 except ImportError:
     WEBRTC_AVAILABLE = False
+
+_AUDIO_BUFFERS_LOCK = threading.Lock()
+_AUDIO_BUFFERS: dict[str, deque] = {}
+
+
+def _get_audio_buffer(key: str) -> deque:
+    with _AUDIO_BUFFERS_LOCK:
+        if key not in _AUDIO_BUFFERS:
+            _AUDIO_BUFFERS[key] = deque(maxlen=2000)
+        return _AUDIO_BUFFERS[key]
+
+# Try to import LiveKit agents (optional)
+LIVEKIT_IMPORT_ERROR = None
+try:
+    from livekit import agents as livekit_agents
+    LIVEKIT_AVAILABLE = True
+except Exception as e:
+    LIVEKIT_AVAILABLE = False
+    LIVEKIT_IMPORT_ERROR = str(e)
 
 # Page configuration
 st.set_page_config(
@@ -357,7 +379,7 @@ with st.sidebar:
     # Option selector for voice mode
     voice_mode = st.selectbox(
         "Voice Input Mode:",
-        options=["Text only (no mic)", "Use microphone (WebRTC)"],
+        options=["Text only (no mic)", "Use microphone (WebRTC)", "LiveKit streaming (beta)"],
         index=0,
         key="voice_mode"
     )
@@ -366,52 +388,73 @@ with st.sidebar:
         if not WEBRTC_AVAILABLE:
             st.error("❌ Microphone capture requires `streamlit-webrtc`. Install it, then restart Streamlit: `pip install streamlit-webrtc`")
         else:
-            st.info("🎤 Allow microphone access in your browser, then speak. Click **Transcribe** when done.")
+            st.info("🎤 Click **START** on the component below, allow microphone permission, speak 2–5 seconds, then click **Transcribe**.")
 
-            class _AudioRecorder:
-                def __init__(self):
-                    self.frames = []
-                    self.sample_rate = None
-                    self.channels = None
+            _webrtc_key = "webrtc_audio_stream"
 
-                def recv(self, frame: "av.AudioFrame"):
-                    if self.sample_rate is None:
-                        self.sample_rate = frame.sample_rate
-                    if self.channels is None:
-                        self.channels = len(frame.layout.channels)
+            def _process_audio_frame(frame: "av.AudioFrame") -> "av.AudioFrame":
+                # NOTE: This callback runs in a separate thread.
+                # Do NOT call Streamlit APIs here.
+                try:
                     arr = frame.to_ndarray()
-                    # Ensure shape is (channels, samples)
+                    # Normalize shapes to (channels, samples)
                     if arr.ndim == 1:
                         arr = arr.reshape(1, -1)
-                    self.frames.append(arr)
-                    return frame
+                    if arr.dtype != np.int16:
+                        arr = arr.astype(np.int16)
+                    buf = _get_audio_buffer(_webrtc_key)
+                    with _AUDIO_BUFFERS_LOCK:
+                        buf.append({
+                            "pcm": arr,
+                            "sample_rate": frame.sample_rate or 16000,
+                            "channels": len(frame.layout.channels) if frame.layout else arr.shape[0],
+                        })
+                except Exception:
+                    # Best-effort: never break the stream
+                    pass
+                return frame
 
-                def to_wav_bytes(self) -> bytes:
-                    if not self.frames:
-                        return b""
-                    data = np.concatenate(self.frames, axis=1)
-                    # Convert to int16 PCM
-                    if data.dtype != np.int16:
-                        # streamlit-webrtc typically provides int16 already, but keep defensive
-                        data = data.astype(np.int16)
-                    pcm = data.T.tobytes()  # interleave by sample
+            def _frames_to_wav_bytes(frames: list["av.AudioFrame"]) -> bytes:
+                if not frames:
+                    return b""
 
-                    buf = io.BytesIO()
-                    with wave.open(buf, "wb") as wf:
-                        wf.setnchannels(int(self.channels or 1))
-                        wf.setsampwidth(2)
-                        wf.setframerate(int(self.sample_rate or 16000))
-                        wf.writeframes(pcm)
-                    return buf.getvalue()
+                sample_rate = frames[0].sample_rate or 16000
+                channels = len(frames[0].layout.channels) if frames[0].layout else 1
 
-            # Start WebRTC audio stream
+                chunks = []
+                for frame in frames:
+                    arr = frame.to_ndarray()
+                    # Expected shape: (channels, samples). Sometimes it arrives as (samples,) for mono.
+                    if arr.ndim == 1:
+                        arr = arr.reshape(1, -1)
+                    if arr.dtype != np.int16:
+                        arr = arr.astype(np.int16)
+                    chunks.append(arr)
+
+                data = np.concatenate(chunks, axis=1)
+                pcm = data.T.tobytes()
+
+                buf = io.BytesIO()
+                with wave.open(buf, "wb") as wf:
+                    wf.setnchannels(int(channels or 1))
+                    wf.setsampwidth(2)
+                    wf.setframerate(int(sample_rate or 16000))
+                    wf.writeframes(pcm)
+                return buf.getvalue()
+
+            # Start WebRTC audio stream (audio_frame_callback buffers frames)
             ctx = webrtc_streamer(
-                key="webrtc_audio_stream",
-                mode=WebRtcMode.SENDONLY,
+                key=_webrtc_key,
+                mode=WebRtcMode.SENDRECV,
+                audio_frame_callback=_process_audio_frame,
                 media_stream_constraints={"audio": True, "video": False},
-                audio_receiver_size=256,
-                audio_processor_factory=_AudioRecorder,
+                rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
             )
+
+            if ctx and ctx.state.playing:
+                st.success("🔴 Microphone is ON (streaming)")
+            else:
+                st.warning("Microphone is OFF. Click **START** above and allow mic permission.")
 
             col_a, col_b = st.columns(2)
             with col_a:
@@ -424,20 +467,41 @@ with st.sidebar:
                         })
                         st.rerun()
 
-                    if not ctx or not ctx.audio_processor:
+                    if not ctx or not ctx.state.playing:
                         st.session_state.chat_history.append({
                             "timestamp": datetime.now(),
                             "role": "assistant",
-                            "content": "❌ Microphone stream not ready. Please allow mic access and try again."
+                            "content": "❌ Microphone stream not ready. Click **START** in the WebRTC component and allow mic access, then try again."
                         })
                         st.rerun()
 
-                    wav_bytes = ctx.audio_processor.to_wav_bytes()
+                    with st.spinner("🎙️ Capturing audio..."):
+                        with _AUDIO_BUFFERS_LOCK:
+                            buf = _get_audio_buffer(_webrtc_key)
+                            chunks = list(buf)
+                            buf.clear()
+
+                        if chunks:
+                            sample_rate = int(chunks[-1].get("sample_rate", 16000) or 16000)
+                            channels = int(chunks[-1].get("channels", 1) or 1)
+                            data = np.concatenate([c["pcm"] for c in chunks], axis=1)
+                            pcm = data.T.tobytes()
+
+                            out = io.BytesIO()
+                            with wave.open(out, "wb") as wf:
+                                wf.setnchannels(channels)
+                                wf.setsampwidth(2)
+                                wf.setframerate(sample_rate)
+                                wf.writeframes(pcm)
+                            wav_bytes = out.getvalue()
+                        else:
+                            wav_bytes = b""
+
                     if not wav_bytes:
                         st.session_state.chat_history.append({
                             "timestamp": datetime.now(),
                             "role": "assistant",
-                            "content": "❌ No audio captured yet. Speak for a few seconds, then click Transcribe."
+                            "content": "❌ No audio captured yet. Click **START**, speak for a few seconds, then click **Transcribe**."
                         })
                         st.rerun()
 
@@ -468,7 +532,13 @@ with st.sidebar:
                     # Now process transcript like a normal command (voice agent first, fallback to orchestrator)
                     if st.session_state.voice_input.strip():
                         spoken = st.session_state.voice_input.strip()
-                        with st.spinner("🎤 Processing voice transcript..."):
+                        st.session_state.chat_history.append({
+                            "timestamp": datetime.now(),
+                            "role": "user",
+                            "content": f"🎤 {spoken}"
+                        })
+
+                        with st.spinner("🧠 Processing voice command..."):
                             try:
                                 voice_result = asyncio.run(
                                     st.session_state.voice_agent.process_voice_command(
@@ -502,12 +572,39 @@ with st.sidebar:
                         st.session_state.voice_input = ""
                         st.rerun()
 
-            with col_b:
-                if st.session_state.get("voice_input"):
-                    st.text_area("Latest transcript", value=st.session_state.voice_input, height=120)
-    else:
-        st.info("🎤 Click 'Start Recording' to begin. Microphone access will be requested.")
-    
+    elif voice_mode == "LiveKit streaming (beta)":
+        st.info("This mode runs a real-time LiveKit voice agent (streaming STT/LLM/TTS) using Groq models.")
+
+        if not LIVEKIT_AVAILABLE:
+            st.error("❌ LiveKit is not installed (or failed to import). Install dependencies and restart: `pip install livekit-agents[groq]`")
+            if LIVEKIT_IMPORT_ERROR:
+                st.code(LIVEKIT_IMPORT_ERROR)
+        else:
+            missing = []
+            if not os.getenv("GROQ_API_KEY"):
+                missing.append("GROQ_API_KEY")
+            if not os.getenv("LIVEKIT_URL"):
+                missing.append("LIVEKIT_URL")
+            if not os.getenv("LIVEKIT_API_KEY"):
+                missing.append("LIVEKIT_API_KEY")
+            if not os.getenv("LIVEKIT_API_SECRET"):
+                missing.append("LIVEKIT_API_SECRET")
+
+            if missing:
+                st.warning("Missing required environment variables for LiveKit streaming:")
+                st.code("\n".join(missing))
+
+            st.markdown("**How to run the LiveKit voice agent:**")
+            st.code("python livekit_voice_agent.py")
+
+            st.markdown(
+                "After starting the worker, connect from a LiveKit room/client (LiveKit Cloud) and the agent will greet you. "
+                "This streaming mode is separate from the Streamlit UI mic mode."
+            )
+
+            if 'voice_input' in st.session_state:
+                st.text_area("Latest transcript", value=st.session_state.voice_input, height=120)
+
     # Fallback text area (for mic-less mode)
     if voice_mode == "Text only (no mic)":
         st.session_state.voice_input = st.text_area(
