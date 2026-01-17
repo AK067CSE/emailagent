@@ -1,0 +1,23 @@
+Since the email content is empty, I will not be able to search for information related to the task. Please provide the email content for me to research and provide key information.
+
+However, if you would like to provide the email content at a later time, I will use the following steps to research relevant information:
+
+- If the email content is a Price Enquiry, I will research for:
+  • Pricing information
+  • Availability of the product/service
+  • Any promotions or discounts available
+- If the email content is a Product Enquiry, I will research for:
+  • Product details/features
+  • Technical specifications
+  • Comparison with similar products
+- If the email content is a Customer Complaint, I will research for:
+  • Support policies
+  • Solutions to resolve the issue
+  • Company procedures for handling complaints
+- If the email content is Customer Feedback, I will research for:
+  • Response strategies to provide a positive response
+  • Industry standard practices for customer feedback
+  • Best practices for maintaining a positive customer relationship
+- If the email content is Off Topic, I will research for:
+  • Relevant context to understand the customer's concern
+  • Industry standard practices for responding to off-topic emails

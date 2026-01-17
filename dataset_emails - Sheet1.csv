@@ -1,0 +1,1202 @@
+"email_id,sender_email,sender_name,subject,body,timestamp,has_attachment,thread_id"
+"1,john.smith@techcorp.com,John Smith,Project Alpha - Budget Approval Needed,""Hi Team,"
+
+I need urgent approval for the Project Alpha budget increase. We're looking at an additional $50K for Q1 due to unexpected infrastructure costs.
+
+Can we schedule a meeting this week to discuss? The deadline for approval is Friday.
+
+"Best regards,"
+"John"",2024-01-15T09:23:00Z,TRUE,thread_001"
+"2,newsletter@techweekly.com,Tech Weekly,Your Weekly Tech Digest - Jan 15,""Hello Subscriber,"
+
+Here's your weekly roundup of the latest in technology:
+- AI breakthroughs in healthcare
+- New smartphone launches
+- Cybersecurity trends for 2024
+
+Click here to read more...
+
+"Unsubscribe | Manage Preferences"",2024-01-15T08:00:00Z,FALSE,thread_002"
+"3,sarah.johnson@clientco.com,Sarah Johnson,Re: Q4 Deliverables Status,""Thanks for the update. The deliverables look great!"
+
+I have a few minor comments on the design document. Can you incorporate them by Wednesday?
+
+"Also, let's set up a call next week to discuss Q1 planning."
+
+"Sarah"",2024-01-15T10:45:00Z,TRUE,thread_003"
+"4,hr@company.com,HR Department,Reminder: Performance Review Due Jan 20,""Dear Employee,"
+
+"This is a reminder that your self-assessment for the annual performance review is due by January 20, 2024."
+
+Please complete the form in the HR portal at your earliest convenience.
+
+"If you have questions, contact your manager or HR representative."
+
+"HR Team"",2024-01-15T07:30:00Z,FALSE,thread_004"
+"5,spam.bot@suspicious.net,Limited Time Offer,You've Won $1,000,000!!!,""CONGRATULATIONS!!!"
+
+"You have been selected to receive $1,000,000 in our exclusive lottery!"
+
+Click here immediately to claim your prize. This offer expires in 24 hours!
+
+"Act now!"",2024-01-15T11:20:00Z,FALSE,thread_005"
+"6,mike.chen@vendor.com,Mike Chen,Invoice #INV-2024-001 - Payment Due,""Hi,"
+
+Attached is invoice #INV-2024-001 for the consulting services provided in December 2023.
+
+"Amount due: $12,500"
+Payment terms: Net 30
+"Due date: February 10, 2024"
+
+Please confirm receipt and let me know if you need any additional information.
+
+"Thanks,"
+"Mike"",2024-01-15T13:15:00Z,TRUE,thread_006"
+"7,alerts@github.com,GitHub,Security Alert: Vulnerability Detected in Repository,""A security vulnerability has been detected in your repository 'ai-platform'."
+
+Severity: High
+Package: lodash@4.17.15
+Vulnerability: Prototype Pollution
+
+We recommend updating to version 4.17.21 or higher immediately.
+
+"View details: [Link]"",2024-01-15T14:30:00Z,FALSE,thread_007"
+"8,emily.rodriguez@partner.com,Emily Rodriguez,Partnership Proposal - AI Solutions,""Hello,"
+
+I hope this email finds you well. I'm reaching out from Partner Corp to explore potential collaboration opportunities.
+
+We specialize in AI-powered customer service solutions and believe there could be great synergy with your platform.
+
+Would you be available for a brief introductory call next week?
+
+"Best regards,"
+Emily Rodriguez
+"Business Development Manager"",2024-01-15T15:00:00Z,TRUE,thread_008"
+"9,team@slack.com,Slack,You have 3 unread mentions,""Hi there,"
+
+You have 3 unread mentions in your Slack workspace:
+
+- @channel message in #engineering
+- Direct message from Alex Thompson
+- Mention in #project-alpha
+
+Click here to view: [Link]
+
+"Slack Team"",2024-01-15T16:45:00Z,FALSE,thread_009"
+"10,david.park@company.com,David Park,URGENT: Server Down - Production Issue,""URGENT - Production server is down!"
+
+Our main API server went offline at 4:30 PM EST. Customer-facing applications are impacted.
+
+I'm investigating now but need immediate support from the DevOps team.
+
+Please join the incident Zoom room: [Link]
+
+"David"",2024-01-15T16:35:00Z,FALSE,thread_010"
+"11,contact@eventbrite.com,Eventbrite,Reminder: AI Summit 2024 - Jan 25,""Your registration for AI Summit 2024 is confirmed!"
+
+Event Details:
+"Date: January 25, 2024"
+Time: 9:00 AM - 5:00 PM
+"Location: Convention Center, Downtown"
+
+Your ticket is attached. See you there!
+
+Questions? Reply to this email.
+
+"Eventbrite Team"",2024-01-15T12:00:00Z,TRUE,thread_011"
+"12,lisa.wong@clientco.com,Lisa Wong,Thank you for the presentation,""Hi,"
+
+Thank you for the excellent presentation yesterday. The stakeholders were very impressed with your team's work.
+
+I'll send over the signed contract by end of week.
+
+Looking forward to working together!
+
+"Best,"
+"Lisa"",2024-01-16T09:15:00Z,FALSE,thread_012"
+"13,noreply@linkedin.com,LinkedIn,You appeared in 12 searches this week,""Your LinkedIn profile appeared in 12 searches this week!"
+
+Top search keywords:
+- AI Engineer
+- Machine Learning
+- Python
+
+Upgrade to Premium to see who's viewing your profile.
+
+"LinkedIn Team"",2024-01-16T08:00:00Z,FALSE,thread_013"
+"14,james.miller@vendor.com,James Miller,Meeting Request: Quarterly Business Review,""Hi,"
+
+I'd like to schedule our Quarterly Business Review for late January or early February.
+
+Could you share your availability for a 90-minute meeting? I'm flexible on dates.
+
+I'll prepare a comprehensive review of our partnership performance and discuss goals for Q1.
+
+"Thanks,"
+"James"",2024-01-16T10:30:00Z,FALSE,thread_014"
+"15,security@company.com,IT Security,Action Required: Update Your Password,""Dear User,"
+
+"As part of our regular security protocol, you are required to update your password within the next 7 days."
+
+"Your current password expires on: January 23, 2024"
+
+"To update your password, visit: [Company Portal]"
+
+"For security best practices, please ensure your new password:"
+- Is at least 12 characters long
+- Contains uppercase and lowercase letters
+- Includes numbers and special characters
+- Is unique and not previously used
+
+"IT Security Team"",2024-01-16T07:45:00Z,FALSE,thread_015"
+"16,rachel.kim@competitor.com,Rachel Kim,Interested in Your Background,""Hi,"
+
+I came across your profile and was impressed by your experience in AI engineering.
+
+We're currently building out our AI team at Competitor Corp and have an exciting Senior AI Engineer position that might interest you.
+
+Would you be open to a confidential conversation about opportunities?
+
+"Best regards,"
+Rachel Kim
+"Senior Recruiter"",2024-01-16T11:20:00Z,FALSE,thread_016"
+"17,billing@aws.com,AWS Billing,Your AWS Bill is Ready - January 2024,""Your AWS bill for January 2024 is now available."
+
+Account: 123456789012
+"Billing Period: Jan 1-15, 2024"
+"Amount Due: $4,287.52"
+
+Services breakdown:
+"- EC2: $2,100.30"
+- S3: $450.20
+- RDS: $890.15
+- Other: $846.87
+
+View detailed bill: [AWS Console]
+
+"Payment will be automatically charged to your card on file on January 25, 2024."
+
+"AWS Billing"",2024-01-16T06:00:00Z,TRUE,thread_017"
+"18,anna.kowalski@clientco.com,Anna Kowalski,Re: Bug Report - Login Issue,""Thanks for the quick response!"
+
+I tested the fix on staging and it works perfectly. The login issue is resolved.
+
+Can you deploy to production today? We have users waiting.
+
+"Also, I noticed another minor issue with the dashboard - I'll send a separate email about that."
+
+"Thanks,"
+"Anna"",2024-01-16T13:45:00Z,FALSE,thread_018"
+"19,promotions@retailstore.com,Retail Store,48-Hour Flash Sale - Up to 70% Off!,""DON'T MISS OUT!"
+
+Our biggest sale of the year is here! Save up to 70% on:
+- Electronics
+- Home & Garden
+- Fashion
+- Sports Equipment
+
+Sale ends Wednesday midnight!
+
+Shop now: [Link]
+
+"Retail Store Marketing"",2024-01-16T14:00:00Z,FALSE,thread_019"
+"20,tom.anderson@company.com,Tom Anderson,Team Lunch - Friday 12:30 PM,""Hey everyone,"
+
+Let's do a team lunch this Friday at 12:30 PM to celebrate completing the project!
+
+I'm thinking we try that new Italian place downtown. Let me know if you have dietary restrictions or preferences.
+
+Reply all with your attendance.
+
+"Tom"",2024-01-16T15:30:00Z,FALSE,thread_020"
+"21,support@zendesk.com,Zendesk Support,Ticket #45123: Customer Complaint - Escalated,""A customer support ticket has been escalated to your attention."
+
+Ticket ID: #45123
+Customer: Acme Corporation
+Issue: Service outage impacting their operations
+Priority: High
+Time open: 6 hours
+
+Customer is requesting immediate callback from senior management.
+
+View ticket: [Link]
+
+"Zendesk"",2024-01-16T16:00:00Z,FALSE,thread_021"
+"22,maria.santos@partner.com,Maria Santos,Contract Renewal Discussion,""Hi,"
+
+Our current contract is up for renewal in March. I'd like to start discussions early to ensure continuity.
+
+We're very happy with the partnership and would like to explore expanding our engagement.
+
+Are you available for a call next week?
+
+"Best,"
+"Maria"",2024-01-17T09:00:00Z,FALSE,thread_022"
+"23,updates@medium.com,Medium Daily Digest,Your Daily Reading List - Jan 17,""Good morning,"
+
+Here are today's top stories based on your interests:
+
+1. Building Production-Ready AI Systems
+2. The Future of Multi-Agent Frameworks
+3. Streamlit Best Practices for Data Apps
+
+Happy reading!
+
+"Medium Team"",2024-01-17T08:00:00Z,FALSE,thread_023"
+"24,kevin.brown@vendor.com,Kevin Brown,Delivery Confirmation - Order #ORD-789,""Hi,"
+
+"Your order #ORD-789 has been shipped and will arrive by January 22, 2024."
+
+Tracking number: 1Z999AA10123456784
+Carrier: UPS
+
+Items in shipment:
+- 5x Laptop Stands
+- 10x Wireless Mice
+- 3x Monitor Arms
+
+You can track your package at: [UPS Link]
+
+Let me know if you have any questions.
+
+"Kevin"",2024-01-17T10:15:00Z,FALSE,thread_024"
+"25,admin@calendly.com,Calendly,Meeting Confirmed: Strategy Session with Alex,""Your meeting has been confirmed!"
+
+What: Strategy Session
+"When: January 22, 2024, 2:00 PM - 3:00 PM EST"
+Where: Zoom (link below)
+
+Zoom Link: [Link]
+Meeting ID: 123 456 7890
+
+Add to Calendar: [Link]
+
+See you there!
+
+"Calendly"",2024-01-17T11:30:00Z,FALSE,thread_025"
+"26,jessica.lee@clientco.com,Jessica Lee,Feedback on Prototype,""Hi,"
+
+"I reviewed the prototype you sent last week. Overall, the team is excited about the direction!"
+
+A few pieces of feedback:
+1. Navigation could be more intuitive
+2. Loading times seem slow
+3. Mobile responsiveness needs work
+
+Can we schedule a walkthrough to discuss these in detail?
+
+"Jessica"",2024-01-17T14:20:00Z,FALSE,thread_026"
+"27,noreply@stripe.com,Stripe,Payment Received - $5,000.00,""Payment received!"
+
+"Amount: $5,000.00"
+From: Acme Corp
+"Date: January 17, 2024"
+Description: Monthly subscription - January
+
+View transaction: [Stripe Dashboard]
+
+"Stripe"",2024-01-17T15:00:00Z,FALSE,thread_027"
+"28,william.garcia@company.com,William Garcia,OOO: Vacation Jan 20-26,""Hi all,"
+
+I'll be out of office from January 20-26 for vacation.
+
+"For urgent matters, please contact:"
+- Technical issues: Sarah Johnson (sarah.johnson@company.com)
+- Project questions: Mike Chen (mike.chen@company.com)
+
+I'll have limited email access but will respond to urgent items.
+
+"Thanks,"
+"William"",2024-01-17T16:45:00Z,FALSE,thread_028"
+"29,legal@company.com,Legal Department,NDA for Review - New Partnership,""Hi,"
+
+Attached is the Non-Disclosure Agreement for the upcoming partnership with Tech Innovations Inc.
+
+Please review by January 25 and provide any comments or concerns.
+
+Key terms:
+- 2-year term
+- Standard confidentiality clauses
+- Mutual agreement
+
+Let me know if you need any clarification.
+
+"Legal Team"",2024-01-17T12:00:00Z,TRUE,thread_029"
+"30,robert.taylor@clientco.com,Robert Taylor,Change Request - Project Scope,""Hi,"
+
+"After internal discussions, we'd like to request a scope change for the current project."
+
+We want to add:
+- User authentication module
+- Advanced reporting dashboard
+- API integrations with 3rd party tools
+
+I understand this will impact timeline and budget. Can we set up a meeting to discuss feasibility?
+
+"Robert"",2024-01-18T09:30:00Z,FALSE,thread_030"
+"31,careers@jobboard.com,Job Board,5 New AI Engineer Jobs Match Your Profile,""New opportunities for you!"
+
+"Based on your profile, here are 5 job matches:"
+
+1. Senior AI Engineer - TechCorp ($150K-$200K)
+2. ML Platform Engineer - StartupXYZ ($140K-$180K)
+3. AI Research Scientist - BigTech ($160K-$220K)
+4. Staff AI Engineer - Innovation Labs ($170K-$210K)
+5. Principal ML Engineer - DataCo ($180K-$230K)
+
+View all jobs: [Link]
+
+"Job Board Team"",2024-01-18T08:00:00Z,FALSE,thread_031"
+"32,jennifer.white@vendor.com,Jennifer White,Product Demo Request,""Hi,"
+
+I'd love to schedule a demo of our new AI-powered analytics platform.
+
+Our solution helps companies:
+- Reduce operational costs by 30%
+- Improve decision-making with real-time insights
+- Automate repetitive data analysis tasks
+
+Would you have 30 minutes next week for a demo?
+
+"Best regards,"
+Jennifer White
+"Sales Executive"",2024-01-18T10:00:00Z,TRUE,thread_032"
+"33,system@jira.com,Jira,10 Issues Assigned to You - Due This Week,""You have 10 issues due this week:"
+
+High Priority:
+- AI-123: Fix memory leak in agent orchestration
+- AI-124: Implement error handling for API calls
+- AI-125: Update documentation for deployment
+
+Medium Priority:
+- AI-126: Refactor database queries
+- AI-127: Add unit tests for new features
+... and 5 more
+
+View in Jira: [Link]
+
+"Jira Notifications"",2024-01-18T07:00:00Z,FALSE,thread_033"
+"34,christopher.martinez@company.com,Christopher Martinez,Great job on the launch!,""Hey,"
+
+Just wanted to say great job on yesterday's product launch! The demo went smoothly and customers are already giving positive feedback.
+
+The team really pulled together. Let's celebrate at happy hour Friday?
+
+"Chris"",2024-01-18T11:45:00Z,FALSE,thread_034"
+"35,billing@office365.com,Microsoft 365,Subscription Renewal Notice,""Your Microsoft 365 subscription will renew on February 1, 2024."
+
+Plan: Business Premium
+Users: 25
+Amount: $625.00/month
+
+Payment method: Visa ending in 1234
+
+"To make changes to your subscription, visit: [Microsoft Admin Center]"
+
+"Microsoft"",2024-01-18T13:00:00Z,FALSE,thread_035"
+"36,patricia.rodriguez@clientco.com,Patricia Rodriguez,URGENT: Production Data Issue,""URGENT - We're seeing incorrect data in the production dashboard!"
+
+The revenue numbers don't match our internal reports. This is affecting executive decision-making.
+
+Can someone investigate immediately? I need an update within 2 hours.
+
+Patricia
+"VP of Operations"",2024-01-18T14:30:00Z,FALSE,thread_036"
+"37,newsletter@aistartups.com,AI Startups Weekly,Top 10 AI Startups to Watch in 2024,""Hello Subscriber,"
+
+This week's edition features:
+- Top 10 AI startups raising Series A
+- Interview with GPT-4 fine-tuning expert
+- Trends in enterprise AI adoption
+- Job opportunities at leading AI companies
+
+Read the full newsletter: [Link]
+
+Unsubscribe anytime
+
+"AI Startups Weekly"",2024-01-18T06:00:00Z,FALSE,thread_037"
+"38,daniel.kim@vendor.com,Daniel Kim,Follow-up: Enterprise License Discussion,""Hi,"
+
+Following up on our conversation last week about enterprise licensing.
+
+I've prepared a custom proposal that includes:
+- Unlimited user licenses
+- Priority support
+- Dedicated account manager
+- Custom integrations
+
+Can we schedule 30 minutes to review the proposal?
+
+"Thanks,"
+"Daniel"",2024-01-19T09:00:00Z,TRUE,thread_038"
+"39,it@company.com,IT Department,Scheduled Maintenance - Sunday Jan 21,""Important: Scheduled System Maintenance"
+
+"Date: Sunday, January 21, 2024"
+Time: 2:00 AM - 6:00 AM EST
+Impact: All systems will be unavailable
+
+Services affected:
+- Email
+- Company portal
+- Internal applications
+- VPN access
+
+Please plan accordingly and save your work before the maintenance window.
+
+"IT Department"",2024-01-19T10:30:00Z,FALSE,thread_039"
+"40,michelle.thompson@partner.com,Michelle Thompson,Collaboration Opportunity - Webinar,""Hi,"
+
+We're hosting a webinar on 'AI in Enterprise: Best Practices' and would love to have you as a guest speaker.
+
+"Date: February 15, 2024"
+Duration: 1 hour
+Expected audience: 500+ enterprise leaders
+
+Your expertise would be valuable. Interested?
+
+"Best,"
+"Michelle"",2024-01-19T11:15:00Z,FALSE,thread_040"
+"41,accounting@company.com,Accounting,Expense Report Rejected - Resubmit Required,""Your expense report for December 2023 has been rejected."
+
+Report ID: EXP-2023-456
+Reason: Missing receipts for items over $50
+
+Please resubmit with complete documentation by January 25.
+
+Items missing receipts:
+- Dec 12: Client dinner - $120
+- Dec 18: Taxi fare - $65
+
+"Accounting Team"",2024-01-19T13:30:00Z,FALSE,thread_041"
+"42,brian.anderson@clientco.com,Brian Anderson,Training Session Scheduled - Jan 30,""Hi Team,"
+
+I've scheduled the training session for your team on using the new platform.
+
+"Date: January 30, 2024"
+Time: 10:00 AM - 12:00 PM EST
+Location: Virtual (Zoom link to follow)
+
+Please confirm attendance and send any specific topics you'd like covered.
+
+"Brian"",2024-01-19T14:45:00Z,FALSE,thread_042"
+"43,alerts@datadog.com,Datadog,Alert: High CPU Usage Detected,""ALERT: High CPU usage detected on production servers"
+
+Server: prod-app-01
+Metric: CPU usage
+Current value: 95%
+Threshold: 80%
+Duration: 15 minutes
+
+View dashboard: [Link]
+
+"Datadog Monitoring"",2024-01-19T15:20:00Z,FALSE,thread_043"
+"44,steven.wilson@vendor.com,Steven Wilson,Price Increase Notification - Effective March 1,""Dear Customer,"
+
+"We're writing to inform you of a price adjustment effective March 1, 2024."
+
+"Current monthly rate: $1,200"
+"New monthly rate: $1,380 (15% increase)"
+
+This increase reflects improvements in service quality and new features added over the past year.
+
+"If you have questions, please reach out."
+
+Steven Wilson
+"Account Manager"",2024-01-19T16:00:00Z,FALSE,thread_044"
+"45,donna.clark@company.com,Donna Clark,Team Building Event - February 3,""Hi Everyone!"
+
+We're organizing a team building event on February 3rd.
+
+Activity: Escape room challenge
+Time: 3:00 PM - 6:00 PM
+Location: Downtown escape room center
+
+Followed by dinner at 6:30 PM!
+
+RSVP by January 26. Spots are limited.
+
+Looking forward to it!
+"Donna"",2024-01-19T12:00:00Z,FALSE,thread_045"
+"46,security@cloudflare.com,Cloudflare,DDoS Attack Mitigated on Your Zone,""A DDoS attack was detected and automatically mitigated on your zone."
+
+Domain: yourdomain.com
+"Attack start: Jan 19, 2024 5:15 PM EST"
+Attack duration: 8 minutes
+Requests blocked: 1.2M
+
+Your site remained online throughout the attack.
+
+View security dashboard: [Link]
+
+"Cloudflare Security"",2024-01-19T17:30:00Z,FALSE,thread_046"
+"47,andrew.moore@clientco.com,Andrew Moore,Reference Request,""Hi,"
+
+We're in final stages of evaluating a vendor and they listed you as a reference.
+
+Would you be willing to share your experience working with them? I have just a few questions and it should take only 10-15 minutes.
+
+Let me know your availability.
+
+"Thanks,"
+"Andrew"",2024-01-20T09:00:00Z,FALSE,thread_047"
+"48,updates@docker.com,Docker,New Version Released - Docker v24.0,""Docker v24.0 is now available!"
+
+New features:
+- Improved build performance
+- Enhanced security features
+- Better multi-platform support
+- Updated CLI commands
+
+See full release notes: [Link]
+
+Update now: docker pull docker:24.0
+
+"Docker Team"",2024-01-20T08:00:00Z,FALSE,thread_048"
+"49,nancy.harris@vendor.com,Nancy Harris,Survey: How Are We Doing?,""Hi,"
+
+"As a valued customer, your feedback is important to us."
+
+Please take 5 minutes to complete our customer satisfaction survey.
+
+Your responses will help us improve our service.
+
+Take survey: [Link]
+
+Thank you!
+Nancy Harris
+"Customer Success Manager"",2024-01-20T10:30:00Z,FALSE,thread_049"
+"50,paul.jackson@company.com,Paul Jackson,Code Review Request - PR #234,""Hey,"
+
+I've submitted PR #234 for the new feature we discussed.
+
+Changes include:
+- New API endpoints for user management
+- Updated database schema
+- Comprehensive test coverage
+
+Could you review when you get a chance? Would like to merge by EOD.
+
+"Thanks,"
+"Paul"",2024-01-20T11:45:00Z,FALSE,thread_050"
+"51,marketing@company.com,Marketing Team,Content Calendar - Q1 2024 Review Needed,""Hi Team,"
+
+Attached is the Q1 2024 content calendar for review.
+
+Please provide feedback by January 26:
+- Blog post topics and timing
+- Social media campaigns
+- Email newsletter schedule
+- Webinar dates
+
+Let's align on priorities for the quarter.
+
+"Marketing Team"",2024-01-20T13:00:00Z,TRUE,thread_051"
+"52,karen.martin@clientco.com,Karen Martin,Issue Resolved - Thanks!,""Hi,"
+
+Just wanted to let you know that the issue we reported last week has been resolved.
+
+Your team's quick response was much appreciated. The fix works perfectly and our operations are back to normal.
+
+Thanks again for the excellent support!
+
+"Karen"",2024-01-20T14:15:00Z,FALSE,thread_052"
+"53,info@coursera.com,Coursera,New Course: Advanced AI Engineering,""A new course matching your interests is now available!"
+
+Course: Advanced AI Engineering with LLMs
+"Instructor: Dr. Sarah Chen, Stanford University"
+Duration: 6 weeks
+"Start date: February 5, 2024"
+
+Topics covered:
+- Fine-tuning large language models
+- Multi-agent systems
+- Production deployment strategies
+- Evaluation and monitoring
+
+Enroll now: [Link]
+
+"Coursera"",2024-01-20T07:00:00Z,FALSE,thread_053"
+"54,ryan.lewis@vendor.com,Ryan Lewis,Contract Amendment for Signature,""Hi,"
+
+Please find attached the contract amendment we discussed.
+
+Changes include:
+- Extended support hours
+- Additional user licenses
+- Updated pricing structure
+
+"Please review, sign, and return by January 27."
+
+Let me know if you have questions.
+
+"Ryan"",2024-01-20T15:30:00Z,TRUE,thread_054"
+"55,system@monday.com,Monday.com,Weekly Progress Report - Projects Dashboard,""Your weekly progress report is ready!"
+
+Overall completion: 68%
+
+Projects on track: 4
+Projects at risk: 1
+Overdue tasks: 3
+
+Top priority tasks this week:
+- Complete API integration testing
+- Review design mockups
+- Submit budget proposal
+
+View full report: [Link]
+
+"Monday.com"",2024-01-20T16:00:00Z,FALSE,thread_055"
+"56,laura.young@partner.com,Laura Young,Joint Marketing Initiative Proposal,""Hi,"
+
+I'd like to propose a joint marketing initiative for Q1.
+
+Idea: Co-host a webinar series on AI adoption in enterprises
+- 4 monthly sessions
+- Each company provides 2 speakers
+- Shared lead generation
+- Split marketing costs
+
+Interested in discussing further?
+
+"Laura"",2024-01-21T09:00:00Z,TRUE,thread_056"
+"57,alerts@sentry.io,Sentry,Error Rate Spike Detected,""New issue detected in production!"
+
+Project: ai-platform
+Environment: production
+Error: UnhandledPromiseRejectionWarning
+Occurrences: 47 in last hour
+Users affected: 12
+
+First seen: 30 minutes ago
+
+View in Sentry: [Link]
+
+"Sentry Alerts"",2024-01-21T10:30:00Z,FALSE,thread_057"
+"58,joseph.hill@company.com,Joseph Hill,Parking Spot Available - Level 3,""Hey everyone,"
+
+"I'm working from home this week and my parking spot (Level 3, Space 42) is available."
+
+"First come, first served. Just reply to claim it for the week."
+
+"Joe"",2024-01-21T08:15:00Z,FALSE,thread_058"
+"59,admin@zoom.us,Zoom,Recording Available: All Hands Meeting,""Your cloud recording is ready!"
+
+Meeting: All Hands - January 2024
+"Date: January 19, 2024"
+Duration: 1h 15m
+
+View recording: [Link]
+Download: [Link]
+
+This recording will be available for 30 days.
+
+"Zoom"",2024-01-21T11:00:00Z,FALSE,thread_059"
+"60,elizabeth.scott@clientco.com,Elizabeth Scott,Feature Request - Export Functionality,""Hi,"
+
+Our users are requesting the ability to export data in multiple formats.
+
+Desired formats:
+- CSV
+- Excel
+- PDF
+- JSON
+
+Is this something that can be added to the roadmap?
+
+"Thanks,"
+"Elizabeth"",2024-01-21T13:30:00Z,FALSE,thread_060"
+"61,support@twilio.com,Twilio,SMS Credits Low - Recharge Recommended,""Your SMS credit balance is running low."
+
+Current balance: 250 credits
+Average daily usage: 100 credits
+Estimated days remaining: 2-3
+
+Recharge now to avoid service interruption: [Link]
+
+"Twilio Support"",2024-01-21T14:45:00Z,FALSE,thread_061"
+"62,mark.wright@vendor.com,Mark Wright,Holiday Schedule - Office Closure,""Hi,"
+
+Please note our office will be closed for the following holidays:
+
+- Presidents Day: February 19
+- Memorial Day: May 27
+- Independence Day: July 4
+
+Support tickets during these periods will be addressed on the next business day.
+
+"Thanks,"
+"Mark"",2024-01-21T15:00:00Z,FALSE,thread_062"
+"63,sandra.green@company.com,Sandra Green,Congratulations on Your Work Anniversary!,""Hi,"
+
+Congratulations on your 5-year work anniversary!
+
+Your contributions to the team have been invaluable. Looking forward to many more years of collaboration.
+
+Let's celebrate at the team meeting this week!
+
+"Best,"
+"Sandra"",2024-01-21T09:30:00Z,FALSE,thread_063"
+"64,notifications@github.com,GitHub,[username] pushed to main,""New commits pushed to repository: ai-platform"
+
+Branch: main
+Commits: 3
+Author: username
+
+Latest commit:
+feat: Add error handling for API timeouts
+
+View changes: [Link]
+
+"GitHub"",2024-01-21T16:20:00Z,FALSE,thread_064"
+"65,thomas.baker@clientco.com,Thomas Baker,API Rate Limit Increase Request,""Hi,"
+
+We're experiencing rate limit issues with our API integration during peak hours.
+
+"Current limit: 1,000 requests/hour"
+"Our peak usage: 1,500 requests/hour"
+
+Can we discuss increasing our rate limit? We're willing to upgrade to a higher tier if needed.
+
+"Thomas"",2024-01-22T09:00:00Z,FALSE,thread_065"
+"66,deals@software.com,Software Deals,Last Chance: 40% Off Annual Plans - Ends Tonight!,""FINAL HOURS!"
+
+Save 40% on annual plans - offer ends TONIGHT at midnight!
+
+Popular plans:
+- Professional: $299/year (reg. $499)
+- Business: $599/year (reg. $999)
+- Enterprise: Custom pricing
+
+Use code: ANNUAL40
+
+Don't miss out! Upgrade now: [Link]
+
+"Software Deals Team"",2024-01-22T10:00:00Z,FALSE,thread_066"
+"67,amanda.adams@partner.com,Amanda Adams,Request for Testimonial,""Hi,"
+
+We're updating our website and would love to feature a testimonial from you about our partnership.
+
+Could you share a few sentences about:
+- Your experience working with us
+- Benefits you've seen
+- Why you'd recommend us
+
+No rush - whenever you have a moment.
+
+Thanks!
+"Amanda"",2024-01-22T11:15:00Z,FALSE,thread_067"
+"68,compliance@company.com,Compliance Team,Mandatory Training: Data Privacy - Complete by Jan 31,""Important: Mandatory Training Required"
+
+"All employees must complete the Data Privacy & GDPR training by January 31, 2024."
+
+Duration: 45 minutes
+Access: Company Learning Portal
+
+This training is required for compliance purposes.
+
+Completion will be tracked and reported to management.
+
+"Compliance Team"",2024-01-22T07:30:00Z,FALSE,thread_068"
+"69,kevin.mitchell@vendor.com,Kevin Mitchell,Service Performance Review - Q4 2023,""Hi,"
+
+Attached is our Q4 2023 service performance review.
+
+Highlights:
+- 99.95% uptime achieved (exceeded SLA)
+- Average response time: 15 minutes
+- Customer satisfaction: 4.8/5
+- 42 feature enhancements delivered
+
+Let's schedule a call to discuss Q1 goals.
+
+"Kevin"",2024-01-22T13:00:00Z,TRUE,thread_069"
+"70,info@techconf.com,Tech Conference,Early Bird Tickets Available - AI Summit 2024,""AI Summit 2024 is coming!"
+
+"Date: June 15-17, 2024"
+"Location: San Francisco, CA"
+
+Early bird pricing (save 30%):
+- General Admission: $699
+"- VIP Pass: $1,299"
+
+Featured speakers:
+- Leading AI researchers
+- Industry practitioners
+- Startup founders
+
+Register now: [Link]
+
+Early bird ends February 1!
+
+"Tech Conference"",2024-01-22T14:30:00Z,FALSE,thread_070"
+"71,richard.torres@company.com,Richard Torres,Laptop Replacement Request,""Hi IT,"
+
+My laptop is running very slowly and frequently freezing. It's impacting my productivity.
+
+Model: MacBook Pro 2019
+"Issues: Slow performance, crashes, battery drains quickly"
+
+Can I get a replacement or upgrade? I'm happy to discuss options.
+
+"Thanks,"
+"Richard"",2024-01-22T15:45:00Z,FALSE,thread_071"
+"72,melissa.campbell@clientco.com,Melissa Campbell,Success Story: 50% Efficiency Gain,""Hi,"
+
+"Wanted to share some exciting news! Since implementing your platform, we've seen a 50% increase in operational efficiency."
+
+Our team is thrilled with the results. Would love to discuss how we can expand usage to other departments.
+
+Thanks for the great partnership!
+
+"Melissa"",2024-01-22T16:00:00Z,FALSE,thread_072"
+"73,updates@npm.com,npm,Security Advisory: Update Required for Package,""Security advisory for your project dependencies:"
+
+Package: express
+Current version: 4.17.1
+Vulnerable: Yes
+Severity: Moderate
+Fixed version: 4.18.2
+
+Recommendation: Update immediately
+
+Run: npm audit fix
+
+View details: [Link]
+
+"npm Security"",2024-01-22T08:00:00Z,FALSE,thread_073"
+"74,george.phillips@vendor.com,George Phillips,Technical Support Case Closed - #TS-8901,""Your technical support case has been resolved."
+
+Case ID: #TS-8901
+Issue: API timeout errors
+Resolution: Updated server configuration and increased timeout limits
+Closed by: Engineering Team
+
+"Please confirm the issue is fully resolved. If you experience any further problems, reply to reopen the case."
+
+Customer satisfaction survey: [Link]
+
+George Phillips
+"Technical Support Manager"",2024-01-23T09:30:00Z,FALSE,thread_074"
+"75,newsletter@startupsdigest.com,Startups Digest,Weekly Roundup: Top Startup News - Jan 23,""Good morning,"
+
+This week's top startup stories:
+
+💰 Series B Funding:
+- AI startup raises $50M
+- FinTech company closes $30M round
+
+🚀 Product Launches:
+- New AI coding assistant
+- Enterprise project management tool
+
+📊 Industry Insights:
+- The state of AI adoption in 2024
+- Remote work trends
+
+Read full digest: [Link]
+
+"Startups Digest"",2024-01-23T08:00:00Z,FALSE,thread_075"
+"76,betty.evans@company.com,Betty Evans,Volunteer Opportunity - STEM Education,""Hi team,"
+
+Our company is organizing a volunteer day to teach STEM to local high school students.
+
+"Date: February 10, 2024"
+Time: 9:00 AM - 3:00 PM
+Location: Lincoln High School
+
+We need 10 volunteers. Interested? Reply by January 30.
+
+This is a great way to give back to the community!
+
+"Betty"",2024-01-23T10:00:00Z,FALSE,thread_076"
+"77,alerts@pagerduty.com,PagerDuty,Critical Incident - Database Connection Failed,""🚨 CRITICAL INCIDENT"
+
+Service: Production Database
+Status: Major outage
+Impact: All services affected
+Started: 10:45 AM EST
+
+Incident team has been notified and is investigating.
+
+Join incident channel: #incident-2024-001
+
+"PagerDuty"",2024-01-23T10:50:00Z,FALSE,thread_077"
+"78,timothy.rivera@clientco.com,Timothy Rivera,Re: Implementation Timeline,""Thanks for the updated timeline."
+
+Everything looks good except the training dates - we need to push those to late February due to internal conflicts.
+
+Can you adjust the schedule and send a revised timeline?
+
+"Timothy"",2024-01-23T11:30:00Z,FALSE,thread_078"
+"79,finance@company.com,Finance Department,Reminder: Expense Reports Due Friday,""Reminder: All expense reports for January must be submitted by this Friday, January 26."
+
+Submit via: Company expense portal
+
+Late submissions will be processed in the next month's cycle.
+
+Questions? Contact finance@company.com
+
+"Finance Department"",2024-01-23T13:00:00Z,FALSE,thread_079"
+"80,sharon.cooper@vendor.com,Sharon Cooper,New Feature Announcement - Advanced Analytics,""Exciting news!"
+
+We're launching Advanced Analytics in our platform next month!
+
+New capabilities:
+- Custom dashboards
+- Predictive analytics
+- Real-time reporting
+- Automated insights
+
+Early access available for premium customers.
+
+Want to be part of the beta program? Let me know!
+
+"Sharon"",2024-01-23T14:15:00Z,TRUE,thread_080"
+"81,admin@dropbox.com,Dropbox,Storage Almost Full - Upgrade Recommended,""Your Dropbox storage is 95% full."
+
+Current plan: 2 GB (Free)
+Used: 1.9 GB
+Available: 100 MB
+
+Upgrade options:
+- Plus: 2 TB for $11.99/month
+- Professional: 3 TB for $19.99/month
+
+Upgrade now: [Link]
+
+"Dropbox"",2024-01-23T15:30:00Z,FALSE,thread_081"
+"82,raymond.bell@company.com,Raymond Bell,Wifi Password for Visitors,""Hey,"
+
+Quick question - what's the guest wifi password for visitors?
+
+I have clients coming in tomorrow and want to make sure they can connect.
+
+"Thanks,"
+"Raymond"",2024-01-23T16:00:00Z,FALSE,thread_082"
+"83,virginia.murphy@clientco.com,Virginia Murphy,Contract Signed - Ready to Kick Off!,""Great news!"
+
+The contract has been signed and we're ready to kick off the project!
+
+Our team is excited to get started. When can we schedule the kickoff meeting?
+
+"I'm available next week: Tuesday, Wednesday, or Friday."
+
+"Virginia"",2024-01-24T09:00:00Z,TRUE,thread_083"
+"84,notifications@asana.com,Asana,Task Assigned to You: Update Documentation,""New task assigned to you:"
+
+Project: AI Platform Development
+Task: Update API documentation
+Assigned by: Sarah Johnson
+"Due date: January 30, 2024"
+Priority: High
+
+Task description:
+Update the API documentation to reflect recent changes in the authentication flow.
+
+View task: [Link]
+
+"Asana"",2024-01-24T10:15:00Z,FALSE,thread_084"
+"85,gregory.cook@vendor.com,Gregory Cook,Webinar Recording: Best Practices for AI Deployment,""Thanks for attending our webinar!"
+
+Topic: Best Practices for AI Deployment in Enterprise
+
+The recording and slides are now available:
+- Video recording: [Link]
+- Presentation slides: [Link]
+- Q&A summary: [Link]
+
+Questions? Reply to this email.
+
+Gregory Cook
+"Webinar Host"",2024-01-24T11:00:00Z,FALSE,thread_085"
+"86,deborah.bailey@company.com,Deborah Bailey,Office Supplies Order,""Hi,"
+
+I'm placing an office supplies order. Need anything?
+
+Current list:
+- Printer paper
+- Pens and markers
+- Sticky notes
+- Coffee supplies
+
+Reply by EOD if you need something added.
+
+"Deborah"",2024-01-24T13:30:00Z,FALSE,thread_086"
+"87,spam.marketing@offers.net,Amazing Deals,Lose 30 Pounds in 30 Days - Secret Formula Revealed!,""AMAZING WEIGHT LOSS SECRET!!!"
+
+Doctors HATE this one simple trick!
+
+Lose 30 pounds in just 30 days with our revolutionary formula!
+
+✓ No exercise needed
+✓ Eat whatever you want
+✓ 100% guaranteed results
+
+Limited time offer - Act now!
+
+"Click here: [Link]"",2024-01-24T14:00:00Z,FALSE,thread_087"
+"88,larry.wood@clientco.com,Larry Wood,Question About Billing,""Hi,"
+
+I have a question about our latest invoice.
+
+"Invoice #INV-2024-015 shows a charge for ""Premium Features"" but we're on the standard plan."
+
+Can you clarify what this charge is for?
+
+"Thanks,"
+"Larry"",2024-01-24T15:20:00Z,FALSE,thread_088"
+"89,hr@company.com,HR Department,Health Insurance Open Enrollment - Feb 1-15,""Important: Health Insurance Open Enrollment"
+
+"Period: February 1-15, 2024"
+
+"During this time, you can:"
+- Change your health plan
+- Add or remove dependents
+- Adjust coverage levels
+
+Information sessions:
+"- February 5, 10:00 AM"
+"- February 8, 2:00 PM"
+
+Register for a session: [Link]
+
+"HR Team"",2024-01-24T07:30:00Z,TRUE,thread_089"
+"90,kathleen.james@partner.com,Kathleen James,Partnership Anniversary - 2 Years!,""Hi,"
+
+Can you believe it's been 2 years since we started our partnership?
+
+Time flies! Thank you for being such a great partner.
+
+Let's schedule a call to discuss goals for year 3 and explore new opportunities for collaboration.
+
+Cheers to continued success!
+
+"Kathleen"",2024-01-24T16:45:00Z,FALSE,thread_090"
+"91,system@figma.com,Figma,File Shared With You: Mobile App Redesign,""A Figma file has been shared with you!"
+
+File: Mobile App Redesign - V2
+Shared by: Design Team
+Access: Can edit
+
+View file: [Link]
+
+Comments and feedback welcome!
+
+"Figma"",2024-01-25T09:00:00Z,FALSE,thread_091"
+"92,justin.gray@vendor.com,Justin Gray,Response to RFP - Proposal Submitted,""Hi,"
+
+We've submitted our proposal in response to your RFP.
+
+Proposal ID: RFP-2024-AI-001
+"Submitted: January 25, 2024"
+
+Our proposal includes:
+- Technical approach and architecture
+- Project timeline and milestones
+- Pricing and payment terms
+- Team qualifications
+
+We're available for clarification questions anytime.
+
+Justin Gray
+"Proposal Manager"",2024-01-25T10:30:00Z,TRUE,thread_092"
+"93,kathy.perez@company.com,Kathy Perez,Office Plants Need Watering,""Hey team,"
+
+Friendly reminder: the office plants need watering!
+
+"If you're in the office today, could someone please water the plants in the common areas?"
+
+Thanks!
+"Kathy"",2024-01-25T11:00:00Z,FALSE,thread_093"
+"94,noreply@indeed.com,Indeed,Your Job Post Has Expired,""Your job posting has expired:"
+
+Position: Senior AI Engineer
+"Posted: December 25, 2023"
+"Expired: January 25, 2024"
+Applications received: 47
+
+To renew this posting or post a new job:
+- Renew for 30 days: $299
+- Post new job: [Link]
+
+View all applications: [Link]
+
+"Indeed"",2024-01-25T08:00:00Z,FALSE,thread_094"
+"95,russell.long@clientco.com,Russell Long,Positive Feedback from End Users,""Hi,"
+
+I wanted to share some positive feedback we've received from end users about the recent updates.
+
+Users particularly like:
+- Improved search functionality
+- Faster load times
+- Cleaner interface
+
+The team's hard work is paying off!
+
+"Russell"",2024-01-25T13:45:00Z,FALSE,thread_095"
+"96,judy.foster@vendor.com,Judy Foster,Renewal Reminder - Contract Expires Feb 15,""Contract Renewal Reminder"
+
+"Your current contract expires on February 15, 2024."
+
+"To ensure uninterrupted service, please initiate renewal by February 1."
+
+"Current contract value: $48,000/year"
+Renewal options: Standard renewal or upgrade to Premium
+
+Let's schedule a call to discuss your needs.
+
+Judy Foster
+"Account Executive"",2024-01-25T14:30:00Z,FALSE,thread_096"
+"97,terry.howard@company.com,Terry Howard,Congratulations - Promotion Announcement,""Hi Everyone,"
+
+I'm pleased to announce that Sarah Johnson has been promoted to Senior AI Engineer!
+
+Sarah has consistently demonstrated exceptional technical skills and leadership. She's been instrumental in our recent project successes.
+
+Please join me in congratulating Sarah!
+
+Terry Howard
+"Engineering Manager"",2024-01-25T15:00:00Z,FALSE,thread_097"
+"98,alerts@newrelic.com,New Relic,Performance Degradation Detected,""Performance issue detected!"
+
+Application: AI Platform API
+Metric: Response time
+"Current: 2,850ms"
+Baseline: 450ms
+Deviation: +533%
+
+Duration: 25 minutes
+User impact: Moderate
+
+Investigate now: [Link]
+
+"New Relic APM"",2024-01-25T16:15:00Z,FALSE,thread_098"
+"99,willie.ward@clientco.com,Willie Ward,Documentation Feedback,""Hi,"
+
+We've reviewed the documentation you provided. It's comprehensive and well-written!
+
+A few minor suggestions:
+- Add more code examples
+- Include troubleshooting section
+- Update screenshots to latest UI
+
+"Overall, great work!"
+
+"Willie"",2024-01-25T12:00:00Z,FALSE,thread_099"
+"100,benefits@company.com,Benefits Team,FSA and HSA Contribution Deadline - January 31,""Important Deadline Reminder"
+
+Last day to set up FSA/HSA contributions for 2024: January 31
+
+Flexible Spending Account (FSA):
+"- Max contribution: $3,050"
+- Use it or lose it
+
+Health Savings Account (HSA):
+"- Max contribution: $4,150 (individual) / $8,300 (family)"
+- Funds roll over
+
+Update contributions: [Benefits Portal]
+
+Questions? Contact benefits@company.com
+
+"Benefits Team"",2024-01-25T07:00:00Z,FALSE,thread_100"

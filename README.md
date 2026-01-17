@@ -1,0 +1,231 @@
+# Email Inbox Organizer
+
+An intelligent email inbox organizer that automatically categorizes, prioritizes, and suggests actions for incoming emails using multi-agent AI systems.
+
+## 🚀 Features
+
+### Core Functionality
+- **Email Organization**: Automatically categorizes emails into meaningful categories
+- **Priority Assignment**: Assigns priority levels (High/Medium/Low) to help users focus on what matters
+- **Action Recommendations**: Suggests appropriate actions (reply, schedule meeting, archive, etc.) with reasoning
+- **Sentiment Analysis**: Analyzes email sentiment to understand emotional tone
+- **Draft Responses**: Generates draft responses for emails requiring replies
+
+### User Interface
+- **Modern Streamlit UI**: Clean, intuitive interface with filtering and search capabilities
+- **Real-time Dashboard**: Visual analytics with charts and metrics
+- **Advanced Filtering**: Filter by category, priority, sentiment, sender, or date range
+- **Search Functionality**: Full-text search across email subjects and bodies
+- **Export Results**: Download analysis results as CSV
+
+### Architecture
+- **Multi-Agent System**: Uses specialized AI agents for different tasks
+- **Groq LLM Integration**: Fast, efficient AI processing with Groq
+- **LangGraph Framework**: Robust agent orchestration and workflow management
+- **Error Handling**: Comprehensive retry logic and graceful error handling
+- **Modular Design**: Clean, maintainable codebase with separation of concerns
+
+## 📋 Requirements
+
+- Python 3.8+
+- Groq API key (free tier available)
+- All dependencies listed in `requirements.txt`
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd emailorganizer
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Set up environment variables**
+   Create a `.env` file in the root directory:
+   ```env
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
+   
+   Or modify the `config.py` file directly to include your API key.
+
+## 🚀 Running the Application
+
+1. **Start the Streamlit app**
+   ```bash
+   streamlit run app.py
+   ```
+
+2. **Open your browser**
+   Navigate to `http://localhost:8501` (or the URL shown in your terminal)
+
+3. **Process emails**
+   - Click "Process Emails with AI" to analyze the dataset
+   - Wait for the AI agents to process the emails (this may take a moment)
+   - Explore the dashboard and filtered email list
+
+## 📊 Usage Guide
+
+### Processing Emails
+1. Load the application in your browser
+2. Click the "Process Emails with AI" button in the sidebar
+3. Wait for the multi-agent system to analyze all emails
+4. View results in the dashboard and email list
+
+### Filtering and Search
+- **Category Filter**: Select specific email categories to view
+- **Priority Filter**: Filter by High/Medium/Low priority emails
+- **Sentiment Filter**: Filter by positive/negative/neutral sentiment
+- **Search**: Use the search bar to find specific emails
+
+### Dashboard Features
+- **Metrics Overview**: Total emails, high priority count, categories, and average confidence
+- **Category Distribution**: Pie chart showing email category breakdown
+- **Priority Distribution**: Bar chart showing priority level distribution
+
+### Email Cards
+Each email card displays:
+- Subject, sender, and timestamp
+- Category and priority badges
+- Email body preview
+- Recommended action with reasoning
+- Draft response (if applicable)
+- Sentiment analysis
+
+## 🏗️ Architecture Overview
+
+### Multi-Agent System
+
+The application uses a multi-agent architecture with specialized agents:
+
+1. **Categorization Agent**: Classifies emails into predefined categories
+2. **Priority Agent**: Assigns priority levels based on urgency and importance
+3. **Action Agent**: Recommends appropriate actions and generates draft responses
+4. **Sentiment Agent**: Analyzes emotional tone of emails
+5. **Orchestrator**: Coordinates all agents and manages the workflow
+
+### Data Flow
+
+```
+Email Dataset → Data Processor → Email Orchestrator → Specialized Agents → Analysis Results → Streamlit UI
+```
+
+### Key Components
+
+- **`config.py`**: Configuration settings and constants
+- **`data_processor.py`**: Handles dataset loading and preprocessing
+- **`agents.py`**: Multi-agent system with specialized AI agents
+- **`app.py`**: Streamlit user interface and main application logic
+
+## 🤖 AI Agent Details
+
+### Categorization Agent
+- **Categories**: Work/Professional, Personal, Marketing/Newsletter, Notifications/System, Billing/Financial, Support/Customer Service, HR/Administrative, Security/Alert, Social/Community, Other
+- **Output**: Category, confidence score, and reasoning
+
+### Priority Agent
+- **Priority Levels**: High (immediate attention), Medium (address soon), Low (address later)
+- **Urgency Score**: 1-10 scale indicating time sensitivity
+- **Factors**: Time sensitivity, sender importance, content urgency, deadlines
+
+### Action Agent
+- **Actions**: Reply Immediately, Schedule Meeting, Archive, Delete, Flag for Follow-up, Forward, Review Later, No Action Needed
+- **Draft Responses**: Automatically generates response drafts when applicable
+- **Reasoning**: Provides clear justification for recommended actions
+
+### Sentiment Agent
+- **Sentiments**: Positive, Negative, Neutral
+- **Analysis**: Considers tone, language, and emotional indicators
+
+## 📁 Dataset
+
+The application works with a CSV dataset containing:
+- `email_id`: Unique identifier
+- `sender_email`: Email address of sender
+- `sender_name`: Name of sender
+- `subject`: Email subject line
+- `body`: Email content
+- `timestamp`: When email was received (ISO format)
+- `has_attachment`: Boolean indicating attachments
+- `thread_id`: Identifier for email conversations
+
+A sample dataset is automatically generated if the provided dataset cannot be loaded.
+
+## 🔧 Configuration
+
+### Model Settings
+- **Default Model**: Llama3-70B-8192 via Groq
+- **Temperature**: 0.1 (for consistent outputs)
+- **Max Tokens**: 2048
+- **Retry Logic**: Up to 3 retries with exponential backoff
+
+### Customization
+You can customize:
+- Email categories in `Config.EMAIL_CATEGORIES`
+- Priority levels in `Config.PRIORITY_LEVELS`
+- Action types in `Config.ACTION_TYPES`
+- Model parameters in `Config`
+
+## 🚨 Error Handling
+
+- **API Failures**: Automatic retry with exponential backoff
+- **Data Parsing**: Fallback to sample dataset if parsing fails
+- **Individual Email Errors**: Continue processing other emails if one fails
+- **Graceful Degradation**: Application remains functional even with partial failures
+
+## 📈 Performance Considerations
+
+- **Batch Processing**: Processes emails in batches to optimize API usage
+- **Caching**: Streamlit caching for data and results
+- **Rate Limiting**: Built-in delays to respect API rate limits
+- **Memory Management**: Efficient data structures for large datasets
+
+## 🔄 Future Enhancements
+
+### Bonus Features (Planned)
+- **Voice Integration**: Bidirectional voice streaming using Google ADK
+- **Email Threading**: Conversation grouping and thread analysis
+- **Bulk Actions**: Process multiple emails simultaneously
+- **Custom Categories**: User-defined email categories
+- **Advanced Analytics**: More sophisticated email insights
+
+### Technical Improvements
+- **Database Integration**: Store results in database for persistence
+- **Real-time Processing**: Process emails as they arrive
+- **Multi-language Support**: Handle emails in different languages
+- **Integration**: Connect with email providers (Gmail, Outlook, etc.)
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **API Key Issues**
+   - Ensure your Groq API key is valid and has sufficient credits
+   - Check that the API key is properly set in environment variables
+
+2. **Dataset Loading Issues**
+   - Verify the CSV file format matches the expected structure
+   - The application will fall back to a sample dataset if loading fails
+
+3. **Processing Errors**
+   - Individual email processing errors won't stop the entire process
+   - Check the console for detailed error messages
+
+4. **Performance Issues**
+   - Processing is limited to 20 emails at a time for demo purposes
+   - Adjust the limit in `app.py` for larger datasets
+
+## 📄 License
+
+This project is provided as part of an assignment. Please refer to the assignment guidelines for usage restrictions.
+
+## 🤝 Support
+
+For questions or issues related to this assignment, please contact the assignment provider within the specified timeframe.
+
+---
+
+**Note**: This application is designed for demonstration purposes and uses sample data. For production use, additional security measures and optimizations would be required.
