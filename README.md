@@ -2,7 +2,16 @@
 AGENTIC DESIGN PATTERN
 
 <img width="1656" height="716" alt="image" src="https://github.com/user-attachments/assets/22c1e1e7-049e-4b44-9bff-38959ba16ca5" />
-![1_page-0012](https://github.com/user-attachments/assets/60323d53-759e-4843-9233-1446f868be0e)
+
+<img width="435" height="580" alt="image" src="https://github.com/user-attachments/assets/0da5d690-29af-4ab8-90c3-9649aace8729" />
+<img width="241" height="581" alt="image" src="https://github.com/user-attachments/assets/1d876bda-1140-4d12-b1c3-dcd047630493" />
+<img width="216" height="580" alt="image" src="https://github.com/user-attachments/assets/1d34d7a8-7c37-4c24-ac63-51d0ee12c60b" />
+<img width="201" height="576" alt="image" src="https://github.com/user-attachments/assets/1da3f6f5-98e1-4ca2-b38b-641a88783098" />
+<img width="225" height="590" alt="image" src="https://github.com/user-attachments/assets/d17256d5-ee07-47b8-ba7f-817af034c188" />
+<img width="212" height="578" alt="image" src="https://github.com/user-attachments/assets/21cc5085-255c-4308-a5ec-a44ab53d3c43" />
+<img width="210" height="579" alt="image" src="https://github.com/user-attachments/assets/982b65bf-22bd-4602-8bb1-388fc940dd0f" />
+<img width="220" height="582" alt="image" src="https://github.com/user-attachments/assets/e7426422-47e6-4876-9146-08dee9770f0b" />
+<img width="201" height="260" alt="image" src="https://github.com/user-attachments/assets/310029a5-7bc5-4fba-819b-02149ecd9760" />
 
 
 
