@@ -45,19 +45,43 @@ An intelligent email inbox organizer that automatically categorizes, prioritizes
    ```
 
 3. **Set up environment variables**
-   Create a `.env` file in the root directory:
+   Copy `.env.example` → `.env` and fill in values.
+   
+   Minimum required:
    ```env
    GROQ_API_KEY=your_groq_api_key_here
    ```
    
-   Or modify the `config.py` file directly to include your API key.
+   Optional (only needed for LiveKit / streaming voice setups):
+   ```env
+   LIVEKIT_URL=wss://...
+   LIVEKIT_API_KEY=...
+   LIVEKIT_API_SECRET=...
+   ```
 
 ## 🚀 Running the Application
 
-1. **Start the Streamlit app**
-   ```bash
-   streamlit run app.py
-   ```
+### Option A: Unified Chatbot (recommended)
+Run the single interface that routes to all agents (RAG + Organizer + CrewAI + Voice):
+
+```bash
+streamlit run unified_chatbot.py
+```
+
+### Option B: Inbox Organizer UI
+```bash
+streamlit run app.py
+```
+
+### Option C: Email Reply UI (CrewAI)
+```bash
+streamlit run email_reply_app.py
+```
+
+### Option D: Voice UI (legacy)
+```bash
+streamlit run voice_streamlit_app.py
+```
 
 2. **Open your browser**
    Navigate to `http://localhost:8501` (or the URL shown in your terminal)
@@ -68,6 +92,42 @@ An intelligent email inbox organizer that automatically categorizes, prioritizes
    - Explore the dashboard and filtered email list
 
 ## 📊 Usage Guide
+
+## 🎤 Voice (Microphone) Setup
+
+The unified chatbot supports real microphone capture using `streamlit-webrtc` and Groq Whisper.
+
+1. Run:
+   ```bash
+   streamlit run unified_chatbot.py
+   ```
+2. In the sidebar, set **Voice Input Mode** to **Use microphone (WebRTC)**.
+3. In the WebRTC component area:
+   - Click **START**
+   - Allow microphone permissions in your browser
+   - Speak for 2–5 seconds
+   - Click **📝 Transcribe**
+
+If you see “Microphone is OFF”, you did not press **START** or your browser blocked mic permissions.
+
+## 💬 Unified Chatbot Commands
+
+### RAG (Search/Chat/Draft/List)
+- `search pricing plans`
+- `chat What are the main customer concerns?`
+- `draft email to client@example.com about follow-up meeting`
+- `list all`
+- `list from John`
+- `list thread thread_001`
+- `emails invoice`
+
+### Email Organizer (Categorize/Priority/Actions)
+- `organize all`
+- `categorize all emails`
+- `filter high priority`
+
+### CrewAI Reply (Categorize + Research + Write)
+- `reply to "I need pricing details"`
 
 ### Processing Emails
 1. Load the application in your browser
@@ -205,6 +265,14 @@ You can customize:
 1. **API Key Issues**
    - Ensure your Groq API key is valid and has sufficient credits
    - Check that the API key is properly set in environment variables
+
+2. **Voice (Microphone) Issues**
+   - Make sure you clicked **START** in the WebRTC component
+   - Allow mic permissions in your browser
+   - Install `streamlit-webrtc` and `av`:
+     ```bash
+     pip install streamlit-webrtc av
+     ```
 
 2. **Dataset Loading Issues**
    - Verify the CSV file format matches the expected structure
