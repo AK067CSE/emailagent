@@ -6,26 +6,32 @@ Enhanced version of the YouTube email reply system with improved categorization 
 import os
 from langchain_core.agents import AgentFinish
 from langchain_community.tools import DuckDuckGoSearchRun
-from langchain.tools import tool
 from datetime import datetime
 from random import randint
 from typing import Union, List, Tuple, Dict, Optional, Any
 from crewai import Crew, Process, Task, Agent
+from crewai.tools import BaseTool
 from config import Config
 from pydantic import BaseModel, Field
 from tenacity import retry, stop_after_attempt, wait_exponential
 from langchain_groq import ChatGroq
 
-# Create a proper tool for web search
-@tool
-def web_search(query: str) -> str:
-    """Search the web for information about a given query."""
-    search_tool = DuckDuckGoSearchRun()
-    try:
-        result = search_tool.run(query)
-        return str(result)
-    except Exception as e:
-        return f"Search error: {str(e)}"
+class WebSearchInput(BaseModel):
+    query: str = Field(..., description="Search query")
+
+
+class WebSearchTool(BaseTool):
+    name: str = "web_search"
+    description: str = "Search the web for information about a given query using DuckDuckGo."
+    args_schema: type[BaseModel] = WebSearchInput
+
+    def _run(self, query: str) -> str:
+        search_tool = DuckDuckGoSearchRun()
+        try:
+            result = search_tool.run(query)
+            return str(result)
+        except Exception as e:
+            return f"Search error: {str(e)}"
 
 # ============================================================================
 # PYDANTIC MODELS FOR STRUCTURED OUTPUTS
@@ -123,7 +129,7 @@ class EmailReplyAgents:
             backstory="""You are a skilled researcher with expertise in finding accurate information 
             quickly. You know how to evaluate sources for credibility and extract the most 
             relevant details for crafting professional email responses.""",
-            tools=[web_search],
+            tools=[WebSearchTool()],
             verbose=True,
             max_iter=3,
             allow_delegation=False,
@@ -298,7 +304,7 @@ class EmailReplyOrchestrator:
             crew = Crew(
                 agents=[categorizer, researcher, writer],
                 tasks=[categorize_task, research_task, reply_task],
-                verbose=2,
+                verbose=True,
                 process=Process.sequential,
                 full_output=True,
                 share_crew=False,
