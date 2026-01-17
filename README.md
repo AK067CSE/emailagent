@@ -1,4 +1,7 @@
 # Email Inbox Organizer
+AGENTIC DESIGN PATTERN
+![Uploading image.png…]()
+
 
 An intelligent email inbox organizer that automatically categorizes, prioritizes, and suggests actions for incoming emails using multi-agent AI systems.
 
