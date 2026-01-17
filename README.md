@@ -10,8 +10,7 @@ AGENTIC DESIGN PATTERN
 <img width="225" height="590" alt="image" src="https://github.com/user-attachments/assets/d17256d5-ee07-47b8-ba7f-817af034c188" />
 <img width="212" height="578" alt="image" src="https://github.com/user-attachments/assets/21cc5085-255c-4308-a5ec-a44ab53d3c43" />
 <img width="210" height="579" alt="image" src="https://github.com/user-attachments/assets/982b65bf-22bd-4602-8bb1-388fc940dd0f" />
-<img width="220" height="582" alt="image" src="https://github.com/user-attachments/assets/e7426422-47e6-4876-9146-08dee9770f0b" />
-<img width="201" height="260" alt="image" src="https://github.com/user-attachments/assets/310029a5-7bc5-4fba-819b-02149ecd9760" />
+
 
 
 
